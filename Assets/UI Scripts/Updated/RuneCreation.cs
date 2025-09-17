@@ -44,8 +44,6 @@ public class RuneCreation : MonoBehaviour
         {
             templates.Add(GestureIO.ReadGestureFromFile(file));
         }
-
-        //Debug.Log("Loaded " + templates.Count + " gesture templates.");
     }
 
     void Update()
@@ -91,10 +89,6 @@ public class RuneCreation : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             RecognizeRune();
-
-            // Hide canvas after recognition
-            //isActive = false;
-            //canvasParent.SetActive(false);
             ClearTexture();
         }
 
@@ -103,12 +97,6 @@ public class RuneCreation : MonoBehaviour
             ClearTexture();
             currentStroke.Clear();
         }
-
-        //To show drawing is happening for a rune
-        //if (drawingIndicator != null)
-        //{
-        //    drawingIndicator.gameObject.SetActive(isActive);
-        //}
     }
 
     void DrawCircle(int cx, int cy)
@@ -146,10 +134,6 @@ public class RuneCreation : MonoBehaviour
         Gesture g = new Gesture(currentStroke.ToArray());
         Result r = PointCloudRecognizer.Classify(g, templates.ToArray());
 
-        //Debug.Log("Recognized Rune: " + r.GestureClass + " (score: " + r.Score + ")");
-        //drawingIndicator.text = "Recognized Rune: " + r.GestureClass + " (score: " + r.Score + ")";
-        //Debug.Log("UI Updated -> " + drawingIndicator.text);
-
         switch (r.GestureClass)
         {
             case "Line":
@@ -169,8 +153,6 @@ public class RuneCreation : MonoBehaviour
                 Debug.Log("Unknown rune.");
                 break;
         }
-
-        //drawingIndicator.text = "Recognized Rune: " + r.GestureClass + " (score: " + r.Score + ")";
     }
 
     void CastFireball() => Debug.Log("Fireball spell cast!");

@@ -14,7 +14,7 @@ public class PlayerCamera : MonoBehaviour
     public void Initialize(Transform target)
     {
         transform.position = target.position;
-        transform.eulerAngles = eulerAngles = target.eulerAngles;
+        transform.eulerAngles = eulerAngles = target.eulerAngles; //original - transform.rotation = target.rotation;
     }
 
     public void UpdateRotation(CameraInput input)

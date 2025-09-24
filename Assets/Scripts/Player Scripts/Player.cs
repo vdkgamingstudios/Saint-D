@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         var input = inputActions.Gameplay;
+        var deltaTime = Time.deltaTime;
 
         //Get cam input & update its rotation
         var cameraInput = new CameraInput { Look = input.Look.ReadValue<Vector2>() };
@@ -38,9 +39,12 @@ public class Player : MonoBehaviour
         { 
             Rotation = playerCamera.transform.rotation, 
             Movement = input.Movement.ReadValue<Vector2>(),
-            Jump = input.Jump.WasPressedThisFrame()
+            Jump = input.Jump.WasPressedThisFrame(),
+            JumpSustain = input.Jump.IsPressed(),
+            Crouch = input.Crouch.WasPressedThisFrame() ? CrouchInput.Toggle : CrouchInput.None
         };
         playerCharacter.UpdateInput(characterInput);
+        playerCharacter.UpdateBody(deltaTime);
     }
 
     private void LateUpdate()

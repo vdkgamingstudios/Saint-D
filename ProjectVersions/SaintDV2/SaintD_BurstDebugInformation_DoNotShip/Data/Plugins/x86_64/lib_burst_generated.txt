@@ -1,0 +1,88 @@
+Library: D:\GitHub\Projects\Saint-D\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--platform=Windows
+--minimum-os-version=
+--backend=burst-llvm-19
+--target=X64_SSE2
+--global-safety-checks-setting=Off
+--meta-data-generation=False
+--dump=Function
+--float-precision=Standard
+--target-framework=NetFramework
+--linker-options=PdbAltPath="SaintD_Data/Plugins/x86_64/lib_burst_generated.pdb"
+--generate-link-xml=Temp\burst.link.xml
+--temp-folder=D:\GitHub\Projects\Saint-D\Temp\Burst
+--force-disable-frame-info-registration
+--key-folder=D:/Unity/2022.3.24f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
+--decode-folder=D:\GitHub\Projects\Saint-D\Library\Burst
+--output=D:\GitHub\Projects\Saint-D\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--pdb-search-paths=Temp/ManagedSymbols/
+
+--method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10
+--method=Unity.Burst.Intrinsics.X86, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::DoSetCSRTrampoline(System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--da352d92cabf024fc9986011d52a4537
+--method=Unity.Burst.Intrinsics.X86, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::DoGetCSRTrampoline()--89425a97f3f500fa810ad03f0c382542
+--platform=Windows
+--minimum-os-version=
+--backend=burst-llvm-19
+--target=AVX2
+--global-safety-checks-setting=Off
+--meta-data-generation=False
+--dump=Function
+--float-precision=Standard
+--target-framework=NetFramework
+--linker-options=PdbAltPath="SaintD_Data/Plugins/x86_64/lib_burst_generated.pdb"
+--generate-link-xml=Temp\burst.link.xml
+--temp-folder=D:\GitHub\Projects\Saint-D\Temp\Burst
+--force-disable-frame-info-registration
+--key-folder=D:/Unity/2022.3.24f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
+--decode-folder=D:\GitHub\Projects\Saint-D\Library\Burst
+--output=D:\GitHub\Projects\Saint-D\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--pdb-search-paths=Temp/ManagedSymbols/
+
+--method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10
+--method=Unity.Burst.Intrinsics.X86, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::DoSetCSRTrampoline(System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--da352d92cabf024fc9986011d52a4537
+--method=Unity.Burst.Intrinsics.X86, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::DoGetCSRTrampoline()--89425a97f3f500fa810ad03f0c382542
+--platform=Windows
+--minimum-os-version=
+--backend=burst-llvm-19
+--target=X64_SSE2
+--global-safety-checks-setting=Off
+--meta-data-generation=False
+--dump=Function
+--float-precision=Standard
+--target-framework=NetFramework
+--float-mode=Fast
+--linker-options=PdbAltPath="SaintD_Data/Plugins/x86_64/lib_burst_generated.pdb"
+--generate-link-xml=Temp\burst.link.xml
+--temp-folder=D:\GitHub\Projects\Saint-D\Temp\Burst
+--force-disable-frame-info-registration
+--key-folder=D:/Unity/2022.3.24f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
+--decode-folder=D:\GitHub\Projects\Saint-D\Library\Burst
+--output=D:\GitHub\Projects\Saint-D\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--pdb-search-paths=Temp/ManagedSymbols/
+
+--method=Unity.Jobs.IJobForExtensions+ForJobStruct`1[[UnistrokeGestureRecognition.ParallelCompareJob, UnistrokeGestureRecognition, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnistrokeGestureRecognition.ParallelCompareJob&, UnistrokeGestureRecognition, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--afff0300842fbf41462453666da0fb4a
+--method=Unity.Jobs.IJobExtensions+JobStruct`1[[UnistrokeGestureRecognition.PreparePathWithRotationJob, UnistrokeGestureRecognition, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnistrokeGestureRecognition.PreparePathWithRotationJob&, UnistrokeGestureRecognition, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--336c1600b06f97d43216f432addfa085
+--method=Unity.Jobs.IJobExtensions+JobStruct`1[[UnistrokeGestureRecognition.PreparePathJob, UnistrokeGestureRecognition, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnistrokeGestureRecognition.PreparePathJob&, UnistrokeGestureRecognition, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--5e80e46c7fc984d99fb897622448dc69
+--platform=Windows
+--minimum-os-version=
+--backend=burst-llvm-19
+--target=AVX2
+--global-safety-checks-setting=Off
+--meta-data-generation=False
+--dump=Function
+--float-precision=Standard
+--target-framework=NetFramework
+--float-mode=Fast
+--linker-options=PdbAltPath="SaintD_Data/Plugins/x86_64/lib_burst_generated.pdb"
+--generate-link-xml=Temp\burst.link.xml
+--temp-folder=D:\GitHub\Projects\Saint-D\Temp\Burst
+--force-disable-frame-info-registration
+--key-folder=D:/Unity/2022.3.24f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
+--decode-folder=D:\GitHub\Projects\Saint-D\Library\Burst
+--output=D:\GitHub\Projects\Saint-D\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--pdb-search-paths=Temp/ManagedSymbols/
+
+--method=Unity.Jobs.IJobForExtensions+ForJobStruct`1[[UnistrokeGestureRecognition.ParallelCompareJob, UnistrokeGestureRecognition, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnistrokeGestureRecognition.ParallelCompareJob&, UnistrokeGestureRecognition, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--afff0300842fbf41462453666da0fb4a
+--method=Unity.Jobs.IJobExtensions+JobStruct`1[[UnistrokeGestureRecognition.PreparePathWithRotationJob, UnistrokeGestureRecognition, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnistrokeGestureRecognition.PreparePathWithRotationJob&, UnistrokeGestureRecognition, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--336c1600b06f97d43216f432addfa085
+--method=Unity.Jobs.IJobExtensions+JobStruct`1[[UnistrokeGestureRecognition.PreparePathJob, UnistrokeGestureRecognition, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnistrokeGestureRecognition.PreparePathJob&, UnistrokeGestureRecognition, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--5e80e46c7fc984d99fb897622448dc69
+

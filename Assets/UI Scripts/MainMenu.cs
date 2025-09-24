@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     public GameObject Warning;
     public void PlayGame()
     {
-        SceneManager.LoadScene("MagicSystemTest");
+        SceneManager.LoadScene("MagicGameScene");
     }
 
     public void TurnOnForOneSecond()

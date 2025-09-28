@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnistrokeGestureRecognition; // From the unistroke asset pack
@@ -12,6 +13,7 @@ public class RuneRecognizer : MonoBehaviour
     public GameObject canvasParent;          // The panel shown/hidden with Q
     public TextMeshProUGUI drawingIndicator; // Displays recognition result
     public GameObject promptText;            // "Press Q to draw" etc.
+    public TextMeshProUGUI popupText;        // Popup feedback text
 
     [Header("Recognizer Settings")]
     [SerializeField] private List<ExampleGesturePattern> patterns; // Assign in Inspector
@@ -27,7 +29,7 @@ public class RuneRecognizer : MonoBehaviour
     private JobHandle? recognizeJob;
 
     // State
-    private bool isActive = false;
+    public bool isActive = false;
     public static bool isDrawingMode = false;
 
     [Header("Drawing Settings")]
@@ -38,6 +40,7 @@ public class RuneRecognizer : MonoBehaviour
     {
         // Hide canvas at start
         canvasParent.SetActive(false);
+        if (popupText != null) popupText.gameObject.SetActive(false);
 
         // Initialize Unistroke recorder + recognizer
         gestureRecorder = new GestureRecorder(256, 0.1f);
@@ -52,13 +55,10 @@ public class RuneRecognizer : MonoBehaviour
         // Toggle rune canvas with Q
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            isActive = !isActive;
-            canvasParent.SetActive(isActive);
-            promptText.SetActive(false);
-            isDrawingMode = isActive;
-
-            if (isActive)
-                Clear();
+            if (!isActive)
+                EnterDrawingMode();
+            else
+                ExitDrawingMode();
         }
 
         if (!isActive) return;
@@ -67,6 +67,9 @@ public class RuneRecognizer : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Clear();
+
+            // Freeze player/game when drawing starts
+            Time.timeScale = 0f;
         }
 
         // Record points while holding mouse
@@ -92,6 +95,11 @@ public class RuneRecognizer : MonoBehaviour
         {
             if (gestureRecorder.Length > 30)
                 RecognizeRecordedGesture();
+            else
+            {
+                // Not enough points to just exit
+                ExitDrawingMode();
+            }
         }
     }
 
@@ -114,6 +122,8 @@ public class RuneRecognizer : MonoBehaviour
         else
         {
             ShowName("Unknown rune");
+            ShowPopup("Unknown Rune!");
+            ExitDrawingMode();
         }
 
         recognizeJob = null;
@@ -129,7 +139,7 @@ public class RuneRecognizer : MonoBehaviour
         if (nameController != null) nameController.Clear();
         if (tmpNameController != null) tmpNameController.Clear();
 
-        drawingIndicator.text = "";
+        if (drawingIndicator != null) drawingIndicator.text = "";
         gestureRecorder.Reset();
         pathDrawer.Clear();
     }
@@ -149,13 +159,13 @@ public class RuneRecognizer : MonoBehaviour
         switch (gestureName)
         {
             case "Line":
-                CastFireball();
+                CastSpell("Fireball");
                 break;
             case "Circle":
-                CastPush();
+                CastSpell("Push");
                 break;
             case "Triangle":
-                CastTeleport();
+                CastSpell("Teleport");
                 break;
             default:
                 Debug.Log("No spell bound to " + gestureName);
@@ -163,9 +173,63 @@ public class RuneRecognizer : MonoBehaviour
         }
     }
 
+    private void CastSpell(string spellName)
+    {
+        Debug.Log($"{spellName} spell cast!");
+        ShowPopup($"{spellName} Cast!");
+        ExitDrawingMode();
+    }
+
+    private void ShowPopup(string message)
+    {
+        if (popupText == null) return;
+
+        popupText.text = message;
+        popupText.gameObject.SetActive(true);
+        StopAllCoroutines();
+        StartCoroutine(HidePopupAfterSeconds(2f));
+    }
+
+    private IEnumerator HidePopupAfterSeconds(float seconds)
+    {
+        yield return new WaitForSecondsRealtime(seconds);
+        popupText.gameObject.SetActive(false);
+    }
+
     void CastFireball() => Debug.Log("Fireball spell cast!");
     void CastPush() => Debug.Log("Push spell cast!");
     void CastTeleport() => Debug.Log("Teleport spell cast!");
+
+    private void EnterDrawingMode()
+    {
+        isActive = true;
+        isDrawingMode = true;
+        canvasParent.SetActive(true);
+        promptText.SetActive(false);
+
+        // Freeze game
+        Time.timeScale = 0f;
+
+        // Unlock cursor
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        Clear();
+    }
+
+    private void ExitDrawingMode()
+    {
+        isActive = false;
+        isDrawingMode = false;
+        canvasParent.SetActive(false);
+
+        // Resume game
+        Time.timeScale = 1f;
+
+        // Lock cursor again
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
 
     private void OnDestroy()
     {

@@ -43,6 +43,7 @@ public class Player : MonoBehaviour
         //Prevent movement, input, and camera updates while paused
         if (PauseMenu.isPaused) return;
         if (RuneRecognizer.isDrawingMode) return;
+        if (MenuNavigation.isPaused) return;
 
         var input = inputActions.Gameplay;
         var deltaTime = Time.deltaTime;
@@ -69,6 +70,7 @@ public class Player : MonoBehaviour
         //Also skip camera/visual updates while paused
         if (PauseMenu.isPaused) return;
         if (RuneRecognizer.isDrawingMode) return;
+        if (MenuNavigation.isPaused) return;
 
         var deltaTime = Time.deltaTime;
         var cameraTarget = playerCharacter.GetCameraTarget();

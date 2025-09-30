@@ -1,36 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
+//using static UnityEditor.Progress;
 
 public class InventoryMenu : MonoBehaviour
 {
-    #region Singleton
+    //#region Singleton
 
-    public static InventoryMenu instance;
+    //public static InventoryMenu instance;
 
-    void Awake()
-    {
-        if (instance != null)
-        {
-            Debug.LogWarning("More than one instance of Inventory found!");
-            return;
-        }
+    //void Awake()
+    //{
+    //    if (instance != null)
+    //    {
+    //        Debug.LogWarning("More than one instance of Inventory found!");
+    //        return;
+    //    }
 
-        instance = this;
-    }
+    //    instance = this;
+    //}
 
-    #endregion
+    //#endregion
 
-    // Callback which is triggered when
-    // an item gets added/removed.
-    public delegate void OnItemChanged();
-    public OnItemChanged onItemChangedCallback;
+    //// Callback which is triggered when
+    //// an item gets added/removed.
+    //public delegate void OnItemChanged();
+    //public OnItemChanged onItemChangedCallback;
 
-    public int space = 20;  // Amount of slots in inventory
+    //public int space = 20;  // Amount of slots in inventory
 
     // Current list of items in inventory
-    public List<Item> items = new List<Item>();
+    //public List<Item> items = new List<Item>();
 
     // Add a new item. If there is enough room we
     // return true. Else we return false.
@@ -57,12 +57,12 @@ public class InventoryMenu : MonoBehaviour
     //}
 
     // Remove an item
-    public void Remove(Item item)
-    {
-        items.Remove(item);     // Remove item from list
+    //public void Remove(Item item)
+    //{
+    //    items.Remove(item);     // Remove item from list
 
-        // Trigger callback
-        if (onItemChangedCallback != null)
-            onItemChangedCallback.Invoke();
-    }
+    //    // Trigger callback
+    //    if (onItemChangedCallback != null)
+    //        onItemChangedCallback.Invoke();
+    //}
 }

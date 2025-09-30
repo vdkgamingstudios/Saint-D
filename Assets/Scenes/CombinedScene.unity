@@ -2153,19 +2153,7 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2137995316}
-        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: SetResolution
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &229127653
 MonoBehaviour:
@@ -9224,11 +9212,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3166382680117424619, guid: 1ee4e68f6fd01704d983cefb2fd42af1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -382
+      value: -701
       objectReference: {fileID: 0}
     - target: {fileID: 3166382680117424619, guid: 1ee4e68f6fd01704d983cefb2fd42af1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 271
+      value: 470
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921604664645944228, guid: 1ee4e68f6fd01704d983cefb2fd42af1, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4102151977951913055, guid: 1ee4e68f6fd01704d983cefb2fd42af1, type: 3}
       propertyPath: m_Pivot.x
@@ -12662,7 +12654,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1480427364}
-  - component: {fileID: 1480427363}
   - component: {fileID: 1480427365}
   m_Layer: 0
   m_Name: GameManager
@@ -12671,19 +12662,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1480427363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480427362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f354e8946e083974da85f57ab8fdac95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  space: 10
 --- !u!4 &1480427364
 Transform:
   m_ObjectHideFlags: 0
@@ -19062,6 +19040,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1480427364}
+  - {fileID: 1850756861}
   - {fileID: 705507995}
   - {fileID: 1930223727}
   - {fileID: 1759827011}
@@ -19071,5 +19050,4 @@ SceneRoots:
   - {fileID: 102542672}
   - {fileID: 1062651145}
   - {fileID: 1889542270}
-  - {fileID: 1850756861}
   - {fileID: 1766440870}
